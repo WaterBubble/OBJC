@@ -1,0 +1,316 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* PracticeUIKitAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* PracticeUIKitAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		2A0003E41321DAC100E938A1 /* HelloWorldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0003E31321DAC100E938A1 /* HelloWorldViewController.m */; };
+		2A0003F21321DF6A00E938A1 /* TopMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0003F11321DF6A00E938A1 /* TopMenuViewController.m */; };
+		2A0004861321E9EC00E938A1 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0004851321E9EC00E938A1 /* BasicViewController.m */; };
+		2A0004BA1321F5FE00E938A1 /* ToggleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0004B91321F5FE00E938A1 /* ToggleViewController.m */; };
+		2A0004D51321FB9300E938A1 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0004D41321FB9300E938A1 /* ModalViewController.m */; };
+		2A0004F91321FE8900E938A1 /* ModalDialogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0004F81321FE8900E938A1 /* ModalDialogViewController.m */; };
+		2AF03F71132260BF00018278 /* ToolBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF03F70132260BF00018278 /* ToolBarViewController.m */; };
+		2AF03FB61322694500018278 /* FontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF03FB51322694500018278 /* FontViewController.m */; };
+		2AF03FF713231E7C00018278 /* ColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF03FF613231E7C00018278 /* ColorViewController.m */; };
+		2AF0400F132320F200018278 /* ButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF0400E132320F200018278 /* ButtonViewController.m */; };
+		2AF04023132323EE00018278 /* SliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF04022132323EE00018278 /* SliderViewController.m */; };
+		2AF040371323264F00018278 /* TouchesBeganViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF040361323264F00018278 /* TouchesBeganViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* PracticeUIKitAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeUIKitAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* PracticeUIKitAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeUIKitAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* PracticeUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2A0003E21321DAC100E938A1 /* HelloWorldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldViewController.h; sourceTree = "<group>"; };
+		2A0003E31321DAC100E938A1 /* HelloWorldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloWorldViewController.m; sourceTree = "<group>"; };
+		2A0003F01321DF6A00E938A1 /* TopMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopMenuViewController.h; sourceTree = "<group>"; };
+		2A0003F11321DF6A00E938A1 /* TopMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopMenuViewController.m; sourceTree = "<group>"; };
+		2A0004841321E9EC00E938A1 /* BasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicViewController.h; sourceTree = "<group>"; };
+		2A0004851321E9EC00E938A1 /* BasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicViewController.m; sourceTree = "<group>"; };
+		2A0004B81321F5FE00E938A1 /* ToggleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToggleViewController.h; sourceTree = "<group>"; };
+		2A0004B91321F5FE00E938A1 /* ToggleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToggleViewController.m; sourceTree = "<group>"; };
+		2A0004D31321FB9300E938A1 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		2A0004D41321FB9300E938A1 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		2A0004F71321FE8900E938A1 /* ModalDialogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalDialogViewController.h; sourceTree = "<group>"; };
+		2A0004F81321FE8900E938A1 /* ModalDialogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalDialogViewController.m; sourceTree = "<group>"; };
+		2AF03F6F132260BF00018278 /* ToolBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolBarViewController.h; sourceTree = "<group>"; };
+		2AF03F70132260BF00018278 /* ToolBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolBarViewController.m; sourceTree = "<group>"; };
+		2AF03FB41322694500018278 /* FontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontViewController.h; sourceTree = "<group>"; };
+		2AF03FB51322694500018278 /* FontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontViewController.m; sourceTree = "<group>"; };
+		2AF03FF513231E7C00018278 /* ColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorViewController.h; sourceTree = "<group>"; };
+		2AF03FF613231E7C00018278 /* ColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorViewController.m; sourceTree = "<group>"; };
+		2AF0400D132320F200018278 /* ButtonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonViewController.h; sourceTree = "<group>"; };
+		2AF0400E132320F200018278 /* ButtonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonViewController.m; sourceTree = "<group>"; };
+		2AF04021132323EE00018278 /* SliderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderViewController.h; sourceTree = "<group>"; };
+		2AF04022132323EE00018278 /* SliderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderViewController.m; sourceTree = "<group>"; };
+		2AF040351323264F00018278 /* TouchesBeganViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchesBeganViewController.h; sourceTree = "<group>"; };
+		2AF040361323264F00018278 /* TouchesBeganViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchesBeganViewController.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* PracticeUIKit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeUIKit_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* PracticeUIKit-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "PracticeUIKit-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* PracticeUIKitAppDelegate.h */,
+				1D3623250D0F684500981E51 /* PracticeUIKitAppDelegate.m */,
+				2A0003E21321DAC100E938A1 /* HelloWorldViewController.h */,
+				2A0003E31321DAC100E938A1 /* HelloWorldViewController.m */,
+				2A0003F01321DF6A00E938A1 /* TopMenuViewController.h */,
+				2A0003F11321DF6A00E938A1 /* TopMenuViewController.m */,
+				2A0004841321E9EC00E938A1 /* BasicViewController.h */,
+				2A0004851321E9EC00E938A1 /* BasicViewController.m */,
+				2A0004B81321F5FE00E938A1 /* ToggleViewController.h */,
+				2A0004B91321F5FE00E938A1 /* ToggleViewController.m */,
+				2A0004D31321FB9300E938A1 /* ModalViewController.h */,
+				2A0004D41321FB9300E938A1 /* ModalViewController.m */,
+				2A0004F71321FE8900E938A1 /* ModalDialogViewController.h */,
+				2A0004F81321FE8900E938A1 /* ModalDialogViewController.m */,
+				2AF03F6F132260BF00018278 /* ToolBarViewController.h */,
+				2AF03F70132260BF00018278 /* ToolBarViewController.m */,
+				2AF03FB41322694500018278 /* FontViewController.h */,
+				2AF03FB51322694500018278 /* FontViewController.m */,
+				2AF03FF513231E7C00018278 /* ColorViewController.h */,
+				2AF03FF613231E7C00018278 /* ColorViewController.m */,
+				2AF0400D132320F200018278 /* ButtonViewController.h */,
+				2AF0400E132320F200018278 /* ButtonViewController.m */,
+				2AF04021132323EE00018278 /* SliderViewController.h */,
+				2AF04022132323EE00018278 /* SliderViewController.m */,
+				2AF040351323264F00018278 /* TouchesBeganViewController.h */,
+				2AF040361323264F00018278 /* TouchesBeganViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* PracticeUIKit.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* PracticeUIKit_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* PracticeUIKit-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* PracticeUIKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "PracticeUIKit" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PracticeUIKit;
+			productName = PracticeUIKit;
+			productReference = 1D6058910D05DD3D006BFB54 /* PracticeUIKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PracticeUIKit" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* PracticeUIKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* PracticeUIKitAppDelegate.m in Sources */,
+				2A0003E41321DAC100E938A1 /* HelloWorldViewController.m in Sources */,
+				2A0003F21321DF6A00E938A1 /* TopMenuViewController.m in Sources */,
+				2A0004861321E9EC00E938A1 /* BasicViewController.m in Sources */,
+				2A0004BA1321F5FE00E938A1 /* ToggleViewController.m in Sources */,
+				2A0004D51321FB9300E938A1 /* ModalViewController.m in Sources */,
+				2A0004F91321FE8900E938A1 /* ModalDialogViewController.m in Sources */,
+				2AF03F71132260BF00018278 /* ToolBarViewController.m in Sources */,
+				2AF03FB61322694500018278 /* FontViewController.m in Sources */,
+				2AF03FF713231E7C00018278 /* ColorViewController.m in Sources */,
+				2AF0400F132320F200018278 /* ButtonViewController.m in Sources */,
+				2AF04023132323EE00018278 /* SliderViewController.m in Sources */,
+				2AF040371323264F00018278 /* TouchesBeganViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PracticeUIKit_Prefix.pch;
+				INFOPLIST_FILE = "PracticeUIKit-Info.plist";
+				PRODUCT_NAME = PracticeUIKit;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PracticeUIKit_Prefix.pch;
+				INFOPLIST_FILE = "PracticeUIKit-Info.plist";
+				PRODUCT_NAME = PracticeUIKit;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "PracticeUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "PracticeUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
