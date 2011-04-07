@@ -13,7 +13,6 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28D7ACF80DDB3853001CB0EB /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* RootViewController.m */; };
-		490408BF134C40EC0098E4DC /* AccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 490408BE134C40EC0098E4DC /* AccountModel.m */; };
 		49EBCC96134D72D800E8E272 /* UserSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBCC95134D72D800E8E272 /* UserSettingViewController.m */; };
 		49EBCD53134D851B00E8E272 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBCD52134D851B00E8E272 /* SFHFKeychainUtils.m */; };
 		49EBCD55134D857000E8E272 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EBCD54134D857000E8E272 /* Security.framework */; };
@@ -31,8 +30,6 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Settings_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings_Prefix.pch; sourceTree = "<group>"; };
 		49040469134AED490098E4DC /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
-		490408BD134C40EC0098E4DC /* AccountModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountModel.h; sourceTree = "<group>"; };
-		490408BE134C40EC0098E4DC /* AccountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountModel.m; sourceTree = "<group>"; };
 		49EBCC94134D72D800E8E272 /* UserSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSettingViewController.h; sourceTree = "<group>"; };
 		49EBCC95134D72D800E8E272 /* UserSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSettingViewController.m; sourceTree = "<group>"; };
 		49EBCD51134D851B00E8E272 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
@@ -63,7 +60,6 @@
 				49040469134AED490098E4DC /* Global.h */,
 				1D3623240D0F684500981E51 /* AppDelegate.h */,
 				1D3623250D0F684500981E51 /* AppDelegate.m */,
-				490408BC134C40A20098E4DC /* Model */,
 				490408BB134C40890098E4DC /* ViewController */,
 			);
 			path = Classes;
@@ -126,15 +122,6 @@
 				49EBCC95134D72D800E8E272 /* UserSettingViewController.m */,
 			);
 			name = ViewController;
-			sourceTree = "<group>";
-		};
-		490408BC134C40A20098E4DC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				490408BD134C40EC0098E4DC /* AccountModel.h */,
-				490408BE134C40EC0098E4DC /* AccountModel.m */,
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 		49EBCD50134D84BC00E8E272 /* Libs */ = {
@@ -208,7 +195,6 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* RootViewController.m in Sources */,
-				490408BF134C40EC0098E4DC /* AccountModel.m in Sources */,
 				49EBCC96134D72D800E8E272 /* UserSettingViewController.m in Sources */,
 				49EBCD53134D851B00E8E272 /* SFHFKeychainUtils.m in Sources */,
 			);

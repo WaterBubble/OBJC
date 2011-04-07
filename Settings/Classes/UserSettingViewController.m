@@ -104,27 +104,6 @@
         label.font = [UIFont boldSystemFontOfSize:18];
 		[cell.contentView addSubview:label];
 		
-/*
-        UITextField *textField = [[[UITextField alloc] initWithFrame:CGRectMake(110, 10, 150, 30)] autorelease];
-        textField.returnKeyType = UIReturnKeyDone; // ReturnキーをDoneに変える
-        textField.delegate = self;
-        textField.tag = [indexPath row];
-*/
-		
-        // ユーザが既に設定済みであればその情報を表示する
-        // NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-	
-/*
-        if ([indexPath row] == 0) {
-            label.text = @"Username";
-            textField.text = [defaults objectForKey:@"USERNAME"];
-        } else if ([indexPath row] == 1) {
-            label.text = @"Password";
-            textField.secureTextEntry = YES;    // パスワードを画面に表示しないようにする
-            textField.text = [defaults objectForKey:@"PASSWORD"];
-        }
-*/
-		
 		if ([indexPath row] == 0) {
             label.text = @"Username";
             
@@ -132,6 +111,12 @@
             _usernameField.returnKeyType = UIReturnKeyDone;
             _usernameField.delegate = self;
             _usernameField.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"USERNAME"];
+			
+			// for validation
+			[_usernameField addTarget:self
+							   action:@selector(usernameFieldEditingChanged) 
+					 forControlEvents:UIControlEventEditingChanged];
+			
             [cell.contentView addSubview:_usernameField];
         } else if ([indexPath row] == 1) {
             label.text = @"Password";
@@ -141,6 +126,12 @@
             _passwordField.returnKeyType = UIReturnKeyDone;
             _passwordField.delegate = self;
             _passwordField.secureTextEntry = YES;
+			
+			// for_passwordFieldvalidation
+			[_passwordField addTarget:self
+							   action:@selector(passwordFieldEditingChanged) 
+					 forControlEvents:UIControlEventEditingChanged];
+			
             // ラッパークラスを利用してKeyChainから保存しているパスワードを取得する処理
             _passwordField.text = [SFHFKeychainUtils getPasswordForUsername:[[NSUserDefaults standardUserDefaults] objectForKey:@"USERNAME"] andServiceName:@"Test App" error:&error];
             [cell.contentView addSubview:_passwordField];
@@ -288,14 +279,30 @@
 #pragma mark UITextFieldDelegate
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
+	LOG_METHOD;
+
     // Saveボタンを有効にする
     [self.navigationItem.rightBarButtonItem setEnabled:YES];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
+	LOG_METHOD;
+
     // キーボードを隠す
     [textField resignFirstResponder];
     return YES;
+}
+
+- (void)usernameFieldEditingChanged {
+	LOG_METHOD;
+	LOG(@"%@", _usernameField);
+	// implement validation here
+}
+
+- (void)passwordFieldEditingChanged {
+	LOG_METHOD;
+	LOG(@"%@", _passwordField);
+	// implement validation here
 }
 
 @end
