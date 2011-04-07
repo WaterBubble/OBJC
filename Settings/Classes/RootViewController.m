@@ -17,12 +17,6 @@
 - (void)loadView {
 	LOG_METHOD;
 	[super loadView];
-}
-
-- (void)viewDidLoad {
-	LOG_METHOD;
-	
-	[super viewDidLoad];
 	
 	UILabel * label = [[UILabel alloc] initWithFrame:self.view.bounds];
 	label.text = @"Hello, world!";
@@ -31,7 +25,7 @@
 	label.textColor = [UIColor blackColor];
 	label.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	[self.view addSubview:label];
-
+	
 	UIButton * settingButton;
 	settingButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 	
@@ -41,9 +35,15 @@
 	newPoint.y += 80;
 	settingButton.center = newPoint;
 	[settingButton addTarget:self 
-			   action:@selector(settingButtonDidPush) 
-	 forControlEvents:UIControlEventTouchUpInside];
-	[self.view addSubview:settingButton];
+					  action:@selector(settingButtonDidPush) 
+			forControlEvents:UIControlEventTouchUpInside];
+	[self.view addSubview:settingButton];	
+}
+
+- (void)viewDidLoad {
+	LOG_METHOD;
+	
+	[super viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,14 +74,21 @@
 
 - (void)settingButtonDidPush {
 	LOG_METHOD;
-	
+
+/*
 	SettingViewController * settingViewController;
 	settingViewController = [[[SettingViewController alloc] init] autorelease];
 	settingViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     settingViewController.delegate = self;
+*/
+	
+	UserSettingViewController * userSettingViewController;
+	userSettingViewController = [[[UserSettingViewController alloc] init] autorelease];
+	userSettingViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    userSettingViewController.delegate = self;
 	
     UINavigationController * navController;
-    navController = [[UINavigationController alloc] initWithRootViewController:settingViewController];
+    navController = [[UINavigationController alloc] initWithRootViewController:userSettingViewController];
 	navController.modalPresentationStyle = UIModalPresentationFormSheet;
 	
 	[self presentModalViewController:navController animated:YES];

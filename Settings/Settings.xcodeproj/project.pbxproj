@@ -15,6 +15,7 @@
 		28D7ACF80DDB3853001CB0EB /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* RootViewController.m */; };
 		490408BF134C40EC0098E4DC /* AccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 490408BE134C40EC0098E4DC /* AccountModel.m */; };
 		490408F4134C47540098E4DC /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 490408F3134C47540098E4DC /* SettingViewController.m */; };
+		49EBCC96134D72D800E8E272 /* UserSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EBCC95134D72D800E8E272 /* UserSettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		490408BE134C40EC0098E4DC /* AccountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountModel.m; sourceTree = "<group>"; };
 		490408F2134C47540098E4DC /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		490408F3134C47540098E4DC /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		49EBCC94134D72D800E8E272 /* UserSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSettingViewController.h; sourceTree = "<group>"; };
+		49EBCC95134D72D800E8E272 /* UserSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSettingViewController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Settings-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Settings-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +119,8 @@
 				28D7ACF70DDB3853001CB0EB /* RootViewController.m */,
 				490408F2134C47540098E4DC /* SettingViewController.h */,
 				490408F3134C47540098E4DC /* SettingViewController.m */,
+				49EBCC94134D72D800E8E272 /* UserSettingViewController.h */,
+				49EBCC95134D72D800E8E272 /* UserSettingViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 				28D7ACF80DDB3853001CB0EB /* RootViewController.m in Sources */,
 				490408BF134C40EC0098E4DC /* AccountModel.m in Sources */,
 				490408F4134C47540098E4DC /* SettingViewController.m in Sources */,
+				49EBCC96134D72D800E8E272 /* UserSettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,4 +7,5 @@
     #import <UIKit/UIKit.h>
     #import "Global.h"
     #import "SettingViewController.h"
+	#import "UserSettingViewController.h"
 #endif
