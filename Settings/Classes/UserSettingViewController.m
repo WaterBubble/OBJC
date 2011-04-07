@@ -1,4 +1,5 @@
 #import "UserSettingViewController.h"
+#import "SFHFKeychainUtils.h"
 
 @implementation UserSettingViewController
 
@@ -101,15 +102,19 @@
 		
         UILabel *label = [[[UILabel alloc] initWithFrame:CGRectMake(10, 6, 100, 30)] autorelease];
         label.font = [UIFont boldSystemFontOfSize:18];
+		[cell.contentView addSubview:label];
 		
+/*
         UITextField *textField = [[[UITextField alloc] initWithFrame:CGRectMake(110, 10, 150, 30)] autorelease];
         textField.returnKeyType = UIReturnKeyDone; // ReturnキーをDoneに変える
         textField.delegate = self;
         textField.tag = [indexPath row];
-        
-        // ユーザが既に設定済みであればその情報を表示する
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+*/
 		
+        // ユーザが既に設定済みであればその情報を表示する
+        // NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	
+/*
         if ([indexPath row] == 0) {
             label.text = @"Username";
             textField.text = [defaults objectForKey:@"USERNAME"];
@@ -118,9 +123,31 @@
             textField.secureTextEntry = YES;    // パスワードを画面に表示しないようにする
             textField.text = [defaults objectForKey:@"PASSWORD"];
         }
+*/
 		
-        [cell.contentView addSubview:label];
-        [cell.contentView addSubview:textField];
+		if ([indexPath row] == 0) {
+            label.text = @"Username";
+            
+            _usernameField = [[UITextField alloc] initWithFrame:CGRectMake(110, 10, 150, 30)];
+            _usernameField.returnKeyType = UIReturnKeyDone;
+            _usernameField.delegate = self;
+            _usernameField.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"USERNAME"];
+            [cell.contentView addSubview:_usernameField];
+        } else if ([indexPath row] == 1) {
+            label.text = @"Password";
+            
+            NSError *error;
+            _passwordField = [[UITextField alloc] initWithFrame:CGRectMake(110, 10, 150, 30)];
+            _passwordField.returnKeyType = UIReturnKeyDone;
+            _passwordField.delegate = self;
+            _passwordField.secureTextEntry = YES;
+            // ラッパークラスを利用してKeyChainから保存しているパスワードを取得する処理
+            _passwordField.text = [SFHFKeychainUtils getPasswordForUsername:[[NSUserDefaults standardUserDefaults] objectForKey:@"USERNAME"] andServiceName:@"Test App" error:&error];
+            [cell.contentView addSubview:_passwordField];
+        }
+		
+		//[cell.contentView addSubview:label];
+        //[cell.contentView addSubview:textField];
     }
     
     return cell;
@@ -133,7 +160,7 @@
 		return @"Your Account";
 	}
 	
-	return "XXX";
+	return @"XXX";
 }
 
 /*
@@ -232,25 +259,37 @@
 
 - (void)saveButtonDidPush {
 	LOG_METHOD;
-		
+	
+	[self saveUserInfo];
 	if ([_delegate respondsToSelector:@selector(saveButtonDidPush:)]) {
         [_delegate saveButtonDidPush:self];
     }
 }
 
+#pragma mark -
+#pragma mark Action
+
+- (void)saveUserInfo {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *oldUsername = [defaults objectForKey:@"USERNAME"];
+    NSError *error;
+    if (![oldUsername isEqualToString:_usernameField.text]) {
+        // ユーザ名が変更になっていた場合は、古いユーザ名で保存したパスワードを削除
+        [SFHFKeychainUtils deleteItemForUsername:oldUsername andServiceName:@"Test App" error:&error];
+    }
+    // ユーザ名はNSUserDefaultsを使って保存
+    [defaults setObject:_usernameField.text forKey:@"USERNAME"];
+    // ラッパークラスを利用してパスワードをKeyChainに保存
+    [SFHFKeychainUtils storeUsername:_usernameField.text andPassword:_passwordField.text forServiceName:@"Test App" updateExisting:YES error:&error];
+    [self.navigationItem.rightBarButtonItem setEnabled:NO];
+}
 
 #pragma mark -
 #pragma mark UITextFieldDelegate
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-    // 入力された情報をセーブする
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-	
-    if (textField.tag == 0) {
-        [defaults setObject:textField.text forKey:@"USERNAME"];
-    } else if (textField.tag == 1) {
-        [defaults setObject:textField.text forKey:@"PASSWORD"];
-    }
+    // Saveボタンを有効にする
+    [self.navigationItem.rightBarButtonItem setEnabled:YES];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
