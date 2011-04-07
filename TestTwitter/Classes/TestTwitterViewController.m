@@ -1,20 +1,12 @@
-//
-//  TestTwitterViewController.m
-//  TestTwitter
-//
-//  Created by masao okamura on 11/03/03.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
-
 #import "TestTwitterViewController.h"
 #import "OAuthConsumer.h"
 
 @implementation TestTwitterViewController
 
-static NSString *kConsumerKey       = @"FUzdwmd47ZrbiuVhDRU8A";
-static NSString *kConsumerSecret    = @"mM9kTW1nnL8C0QjsyrpQez1R7F8VJWuRKIJHojwOc";
-static NSString *kAccessToken       = @"94966598-UfUc0FkpVwkRaJtL9CGY0gz0rPZcAesrCtoZbiRfp";
-static NSString *kAccessTokenSecret = @"fkOAm6GwJVjtq6uJ7L698hEuPALHEtNWTVSJsKVz5tI";
+static NSString *kConsumerKey       = @"xx";
+static NSString *kConsumerSecret    = @"xx";
+static NSString *kAccessToken       = @"xx";
+static NSString *kAccessTokenSecret = @"xx";
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.

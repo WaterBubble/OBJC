@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS account;
+CREATE TABLE account (
+'recordId' integer PRIMARY KEY,
+'userId' text default NULL,
+'password' text default NULL
+);
+
+INSERT INTO account ( userId, password ) VALUES ( null, null );
