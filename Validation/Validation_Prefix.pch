@@ -5,6 +5,7 @@
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
-    #import "Global.h"
-	#import "UserSettingViewController.h"
+	#import "Global.h"
+	#import "RootViewController.h"
+	#import "ValidationViewController.h"
 #endif

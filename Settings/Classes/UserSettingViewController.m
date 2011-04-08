@@ -137,8 +137,6 @@
             [cell.contentView addSubview:_passwordField];
         }
 		
-		//[cell.contentView addSubview:label];
-        //[cell.contentView addSubview:textField];
     }
     
     return cell;
