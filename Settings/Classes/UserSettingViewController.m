@@ -11,15 +11,13 @@
 - (id)initWithStyle:(UITableViewStyle)style {
 	LOG_METHOD;
 
-    // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
+    // Grouped
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         // Custom initialization.
     }
     return self;
 }
-
-
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -29,19 +27,30 @@
 
 	[super viewDidLoad];
 	
-	UIBarButtonItem * cancelButtonItem;
-	cancelButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel 
-																	 target:self
-																	 action:@selector(cancelButtonDidPush)];
+	UIBarButtonItem * backButtonItem;
+	backButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back"
+													  style:UIBarButtonItemStyleBordered
+													 target:self
+													 action:@selector(backButtonDidPush)];
 	
-	UIBarButtonItem * saveButtonItem;
-	saveButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave 
-																   target:self
-																   action:@selector(saveButtonDidPush)];
-	
-	self.navigationItem.leftBarButtonItem  = cancelButtonItem;
-	self.navigationItem.rightBarButtonItem = saveButtonItem;
+	self.navigationItem.leftBarButtonItem = backButtonItem;
 	self.navigationItem.title = @"Settings";
+	
+	UIButton * button;
+	button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+	[button setTitle:@"Save" forState:UIControlStateNormal];
+	[button sizeToFit];
+	CGPoint newPoint = self.view.center;
+	newPoint.y -= 80;
+	button.center = newPoint;
+	
+	[button addTarget:self
+			   action:@selector(saveButtonDidPush)
+	 forControlEvents:UIControlEventTouchUpInside];
+	
+	[button setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
+
+	[self.view addSubview:button];
 
 }
 
@@ -239,10 +248,10 @@
 #pragma mark -
 #pragma mark buttonAction
 
-- (void)cancelButtonDidPush {
+- (void)backButtonDidPush {
 	LOG_METHOD;
-	if ([_delegate respondsToSelector:@selector(cancelButtonDidPush:)]) {
-        [_delegate cancelButtonDidPush:self];
+	if ([_delegate respondsToSelector:@selector(backButtonDidPush:)]) {
+        [_delegate backButtonDidPush:self];
     }
 }
 
@@ -250,9 +259,6 @@
 	LOG_METHOD;
 	
 	[self saveUserInfo];
-	if ([_delegate respondsToSelector:@selector(saveButtonDidPush:)]) {
-        [_delegate saveButtonDidPush:self];
-    }
 }
 
 #pragma mark -
@@ -271,6 +277,13 @@
     // ラッパークラスを利用してパスワードをKeyChainに保存
     [SFHFKeychainUtils storeUsername:_usernameField.text andPassword:_passwordField.text forServiceName:@"Test App" updateExisting:YES error:&error];
     [self.navigationItem.rightBarButtonItem setEnabled:NO];
+	
+	UIAlertView * alert = [[[UIAlertView alloc] initWithTitle:@"saved" 
+													 message:@"complete" 
+													delegate:nil 
+										   cancelButtonTitle:nil 
+										   otherButtonTitles:@"OK", nil] autorelease];
+	[alert show];
 }
 
 #pragma mark -

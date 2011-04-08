@@ -98,21 +98,11 @@
 #pragma mark -
 #pragma mark Delegate
 
-- (void)cancelButtonDidPush:(id)controller
+- (void)backButtonDidPush:(id)controller
 {
 	LOG_METHOD;
 	
     [controller dismissModalViewControllerAnimated:YES];
 }
-
-- (void)saveButtonDidPush:(id)controller
-{
-	LOG_METHOD;
-	
-    [controller dismissModalViewControllerAnimated:YES];
-}
-
-
-
 
 @end
